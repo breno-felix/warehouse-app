@@ -107,7 +107,7 @@ RSpec.describe Warehouse, type: :model do
         expect(result).to eq false
       end
     end
-    context 'zip code attribute format is 00000-000' do
+    context 'zipcode attribute format is 00000-000' do
       it 'false when forget character -' do
         # Arrange
         warehouse = Warehouse.new(name: 'Rio', code: 'RIO', address: 'Endereço', CEP: '000000000',
