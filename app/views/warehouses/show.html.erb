@@ -1,16 +1,22 @@
-  <h1>Galpão <%= @warehouse.code %></h1>
-  <h2><%= @warehouse.description %></h2>
-  <div>
-    <dl>
-      <dt><strong>Nome:</strong></dt>
-      <dd><%= @warehouse.name %></dd>
-      <dt><strong>Cidade:</strong></dt>
-      <dd><%= @warehouse.city %></dd>
-      <dt><strong>Área:</strong></dt>
-      <dd><%= @warehouse.area %> m2</dd>
-      <dt><strong>Endereço:</strong></dt>
-      <dd><%= @warehouse.address %> <strong>CEP:</strong> <%= @warehouse.CEP %></dd>
-    </dl>     
-  </div>
+ <h1>Galpão <%= @warehouse.code %></h1>
+ <h2><%= @warehouse.description %></h2>
+ <div>
+   <dl>
+     <dt><strong>Nome:</strong></dt>
+     <dd><%= @warehouse.name %></dd>
+     <dt><strong>Cidade:</strong></dt>
+     <dd><%= @warehouse.city %></dd>
+     <dt><strong>Área:</strong></dt>
+     <dd><%= @warehouse.area %> m2</dd>
+     <dt><strong>Endereço:</strong></dt>
+     <dd><%= @warehouse.address %> <strong>CEP:</strong> <%= @warehouse.CEP %></dd>
+   </dl>     
+ </div>
 
+<div>
+  <%= link_to 'Editar', edit_warehouse_path(@warehouse.id) %>
+  <%= button_to('Remover', warehouse_path(@warehouse.id), method: :delete) %>
+</div>
+<div>
   <%= link_to 'Voltar', root_path %>
+</div>
