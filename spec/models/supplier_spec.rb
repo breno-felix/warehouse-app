@@ -79,7 +79,7 @@ RSpec.describe Supplier, type: :model do
       it "true when it has 14 numeric digits" do
         # Arrange
         supplier = Supplier.new(corporate_name: 'ACME LTDA', brand_name: 'ACME', 
-                                registration_number: '43447216000102',
+                                registration_number: '03447216000102',
                                 full_address: 'Av das Palmas, 100', city: 'Bauru',
                                 state: 'SP', email: 'contato@acme.com',
                                 phone_number: '1134963861')
@@ -127,7 +127,6 @@ RSpec.describe Supplier, type: :model do
         # Assert
         expect(result).to eq false
       end
-      
-    end
+    end  
   end
 end
